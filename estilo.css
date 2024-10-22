@@ -1,0 +1,258 @@
+body {
+    background-image: url('img/unite.jpg');
+}
+
+#pokemonModal .modal-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+/* Animación de borde brillante para la ventana modal */
+@keyframes glowModal {
+    0% {
+        box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 30px rgb(0, 255, 0), 0 0 60px rgba(0, 255, 0, 0.8);
+    }
+    100% {
+        box-shadow: 0 0 10px rgb(0, 255, 0);
+    }
+}
+
+/* Aplica la animación a la ventana modal */
+#pokemonModal .modal-content {
+    border: 2px solid rgba(0, 255, 0, 0.5); /* Borde inicial */
+    animation: glowModal 3s infinite;
+}
+
+
+/* Animación del texto en la ventana modal (opcional) */
+@keyframes glowText {
+    0% {
+        text-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(255, 0, 0, 1), 0 0 40px rgba(255, 0, 0, 0.8);
+    }
+    100% {
+        text-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+    }
+}
+
+/* Aplica la animación al texto dentro del modal */
+#pokemonModal .modal-title {
+
+    animation: glowText 3s infinite;
+}
+
+/* Animación del título con más brillo */
+@keyframes pulseTitle {
+    0% {
+        transform: scale(1);
+        text-shadow: 0 0 50px rgb(255, 0, 149);
+    }
+    50% {
+        transform: scale(1.1);
+        text-shadow: 0 0 50px rgb(85, 0, 255), 0 0 80px rgba(255, 0, 0, 0.983);
+    }
+    100% {
+        transform: scale(1);
+        text-shadow: 0 0 100px rgba(255, 0, 0, 0.7);
+    }
+}
+
+/* Aplica la animación al título */
+#titulo {
+    color: rgba(255, 247, 0, 0.475);
+    animation: pulseTitle 3s infinite;
+}
+
+
+
+/* Estilos para el historial de búsquedas */
+#search-history {
+    max-height: 200px;
+    overflow-y: auto; /* Permite scroll si hay muchas búsquedas */
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo semi-transparente */
+    border: 2px solid rgb(217, 255, 0); /* Borde del historial */
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 50px rgb(0, 255, 0); /* Efecto de luz */
+}
+
+#search-history li {
+    margin: 5px 0;
+    padding: 5px;
+    background-color: rgba(0, 255, 0, 0.1);
+    color: #fff;
+    border-radius: 5px;
+    animation: glowHistoryItem 1.5s ease-in-out;
+}
+
+@keyframes glowHistoryItem {
+    0% {
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 15px rgb(255, 255, 255);
+    }
+    100% {
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    }
+}
+
+/* Estilos para el botón de eliminar historial con efecto de luz */
+#clear-history-btn {
+    border: 2px solid rgba(255, 0, 0, 0.7); /* Borde rojo */
+    padding: 10px 20px;
+    background-color: transparent; /* Fondo transparente */
+    color: black;
+    font-size: 16px;
+    border-radius: 10px;
+    transition: background-color 0.3s, color 0.3s;
+    border: 0 0 10px rgba(255, 0, 0, 0.5);
+    animation: glowButton 2s infinite; /* Efecto de luz animado */
+}
+
+/* Animación de luz para el botón */
+@keyframes glowButton {
+    0% {
+        box-shadow: 0 0 50px rgba(255, 0, 0, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(255, 0, 0, 1), 0 0 40px rgba(255, 0, 0, 0.8);
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+    }
+}
+
+/* Alerta con borde brillante */
+.alert-danger {
+    border: 2px solid rgba(255, 0, 0, 0.5);
+    animation: glowAlert 2s infinite;
+}
+
+/* Animación para hacer que la alerta brille */
+@keyframes glowAlert {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(255, 0, 0, 1), 0 0 60px rgba(255, 0, 0, 0.8);
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+    }
+}
+
+
+
+
+
+
+.carousel-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.pokemon-info {
+    margin-top: 10px;
+}
+
+
+
+
+/* Animación del cuadro de búsqueda */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 50px rgb(0, 255, 251);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 10px rgb(0, 255, 132) rgb(0, 255, 247);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 100px rgb(0, 255, 247);
+    }
+}
+
+/* Aplica la animación al cuadro de búsqueda */
+.input-group {
+    animation: pulse 3s infinite;
+}
+
+
+
+.word-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 15px;
+  }
+  
+  .word {
+    font-size: 20px;
+    color: #333;
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+  }
+
+  
+
+
+.carousel-item img {
+    max-width: 400px; 
+    max-height: 400px;
+    margin: 0 auto;
+    display: block; 
+}
+
+.carousel-indicators [data-bs-target] {
+    background-color: #007bff; /* Cambia el color de los puntos */
+    width: 12px;
+    height: 12px;
+    border-radius: 50%; /* Haz los puntos más redondos */
+    margin: 0 4px;
+}
+
+.carousel-indicators [data-bs-target].active {
+    background-color: #28a745; /* Cambia el color del punto activo */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    border-radius: 50%; /* Hacerlos redondos */
+    width: 50px; /* Tamaño del ícono */
+    height: 50px;
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo más oscuro al hacer hover */
+}
+
+.carousel-control-prev-icon::before,
+.carousel-control-next-icon::before {
+    font-size: 30px; /* Tamaño del ícono de la flecha */
+}
+
+.carousel-item {
+    transition: transform 1s ease, opacity 0.5s ease-in-out;
+}
+
+
